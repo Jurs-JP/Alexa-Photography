@@ -67,7 +67,7 @@ header {
 
 .title_wrapper h1{
   text-align: center;
-  font-size: 120px;
+  font-size: 12vw;
 
   text-align: center;
   font-family: 'Dancing Script', cursive;
@@ -94,7 +94,7 @@ header {
     background-color: inherit;
     font-weight: bolder;
     font-family: 'Arvo', serif;
-    font-size: 1.4em;
+    font-size: 2vw;
     border: none;
     color: blue;
 }
