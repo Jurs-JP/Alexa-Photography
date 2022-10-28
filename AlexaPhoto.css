@@ -8,7 +8,7 @@ body {
     background-attachment: scroll;
 
     background-color: antiquewhite;
-}
+} 
 html {
     scroll-behavior: smooth;
 }
@@ -16,9 +16,10 @@ html:target{
     scroll-margin-top: 1em;
 }
 
-header {
+#head1 {
     position: sticky;
-    top: 10px;
+   
+    z-index: 10;
 }
 
 a{ 
@@ -31,14 +32,22 @@ a{
     height: 100px;
 
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
+
+#navigationBar2 {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+}
+
 #navBar1 {
     width: 30%;
     height: 100px;
-
-
-
+    
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -47,7 +56,7 @@ a{
     width: 50px;
     height: 50px;
     margin-left: 50px;
-    border: 2px solid white;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 50%;
     background-image: url("https://cdn-icons-png.flaticon.com/512/711/711191.png");
     background-repeat: no-repeat;
@@ -55,23 +64,15 @@ a{
 
     background-color: white;
 }
-#navBar2 {
-    width: 70%;
-    height: 100px;
 
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-#navigationBar > #navBar2 > button {
+#navigationBar > #navBar2 > button, #navigationBar > #navBar3 > button {
     margin: 0px 25px 0px 25px;
     border: none;
     background-color: inherit;
     font-size: 1.3em;
     font-family: sans-serif;
     cursor: pointer;
-    color: white;
+    color: rgb(0, 0, 0);
     
 }
 #navigationBar > button:nth-child(1) {
@@ -79,7 +80,7 @@ a{
     padding: 5px;
     border-radius: 10px;
 }
-
+/*
 #titleBox{
     width: 100%;
     height: 600px;
@@ -94,4 +95,110 @@ a{
 #titleBox > h1 {
 
     filter: drop-shadow(1px 1px rgb(85, 82, 82));
+}
+
+ */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
+
+#head2 {
+  height: 200vh;
+  
+}
+
+.container {
+  /* hide fixed overflow contents */
+  clip: rect(0, auto, auto, 0);
+
+  /* does not work if overflow = visible */
+  overflow: hidden;
+
+  /* only works with absolute positioning */
+  position: absolute;
+
+  /* Make sure containers are full-width and height */
+  height: 100vh;
+  left: 0;
+  width: 100%;
+  
+  
+  /* safari hack */
+  -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+}
+
+.container_solid {
+  background: white;
+  
+  /* position this container at the top of its parent element */
+  top: 0;
+}
+
+.title_wrapper {
+  position: fixed;
+  display: block;  
+  margin: auto;
+  width: 100%;
+  /* center the text wrapper vertically */
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.title_wrapper h1 {
+  text-align: center;
+  font-size: 10em;
+  text-align: center;
+  font-family: 'Tangerine', sans-serif;
+  font-weight: 900;
+}
+
+.container_solid .title_wrapper h1{
+  /* the text background */
+  background: url('https://images.unsplash.com/photo-1524313118018-d8139913a0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHRleHQlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+  background-size: 100vw auto;
+  background-position: center;
+  
+  /* clip the text is possible */
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+  /* fallback text color */
+  color: black;
+}
+
+.container_image {
+  /* Grab a free image from unsplash */
+  background-image: url('camera01.jpg');
+  background-size:100vw auto;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+ 
+  
+  /* position the second container below the first container */
+  top: 100vh;
+}
+
+.container_image .title_wrapper h1{
+  color: white;
+}
+
+section {
+  min-height: 100vh;
+  padding: 2em;
+  margin: auto;
+  max-width: 800px;
+}
+
+section h2 {
+  font-family: 'Fraunces', serif;
+}
+
+section p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
