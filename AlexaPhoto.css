@@ -1,111 +1,7 @@
-body {
-    width: 1325px;
-    height: 2000px;
-
-    background-image: url('camera01.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: scroll;
-
-    background-color: antiquewhite;
-} 
-html {
-    scroll-behavior: smooth;
-}
-html:target{
-    scroll-margin-top: 1em;
-}
-
-#head1 {
-    position: sticky;
-   
-    z-index: 10;
-}
-
-a{ 
-    text-decoration: none;
-    color: inherit;
-}
-
-#navigationBar {
-    width: 100%;
-    height: 100px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#navigationBar2 {
-    width: 100%;
-    height: 100px;
-
-    display: flex;
-    align-items: center;
-}
-
-#navBar1 {
-    width: 30%;
-    height: 100px;
-    
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-#navBar1 > div {
-    width: 50px;
-    height: 50px;
-    margin-left: 50px;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 50%;
-    background-image: url("https://cdn-icons-png.flaticon.com/512/711/711191.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    background-color: white;
-}
-
-#navigationBar > #navBar2 > button, #navigationBar > #navBar3 > button {
-    margin: 0px 25px 0px 25px;
-    border: none;
-    background-color: inherit;
-    font-size: 1.3em;
-    font-family: sans-serif;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    
-}
-#navigationBar > button:nth-child(1) {
-    border: 1px solid white;
-    padding: 5px;
-    border-radius: 10px;
-}
-/*
-#titleBox{
-    width: 100%;
-    height: 600px;
-    font-size: 9em;
-    color: rgb(255, 255, 255);
-    font-family: 'Tangerine', sans-serif;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#titleBox > h1 {
-
-    filter: drop-shadow(1px 1px rgb(85, 82, 82));
-}
-
- */
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
 
-#head2 {
+header {
   height: 200vh;
-  
 }
 
 .container {
@@ -149,15 +45,16 @@ a{
 
 .title_wrapper h1 {
   text-align: center;
-  font-size: 10em;
+  font-size: 64px;
+  text-transform: uppercase;
   text-align: center;
-  font-family: 'Tangerine', sans-serif;
+  font-family: 'Fraunces', serif;
   font-weight: 900;
 }
 
-.container_solid .title_wrapper h1{
+.container_solid .title_wrapper h1 {
   /* the text background */
-  background: url('https://images.unsplash.com/photo-1524313118018-d8139913a0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHRleHQlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+  background: url(https://images.unsplash.com/photo-1575058752200-a9d6c0f41945?&q=85);
   background-size: 100vw auto;
   background-position: center;
   
@@ -173,18 +70,16 @@ a{
 
 .container_image {
   /* Grab a free image from unsplash */
-  background-image: url('camera01.jpg');
+  background-image: url(https://images.unsplash.com/photo-1575058752200-a9d6c0f41945?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
   background-size:100vw auto;
   background-position: center;
   background-attachment: fixed;
-  display: flex;
- 
   
   /* position the second container below the first container */
   top: 100vh;
 }
 
-.container_image .title_wrapper h1{
+.container_image .title_wrapper h1 {
   color: white;
 }
 
