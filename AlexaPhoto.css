@@ -110,7 +110,17 @@ header {
     font-family: 'Arvo', serif;
     font-size: 2vw;
     border: none;
+
+
+    transition: all 300ms ease-in-out;
     
+}
+#navigationBox > #navBox2 > button:hover {
+    scale: 1.1;
+    padding: 4px 5px 4px 5px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+
 }
 
 a {
