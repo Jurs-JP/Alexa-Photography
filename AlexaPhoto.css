@@ -7,7 +7,9 @@ html {
 header {
   height: 200vh;
 }
-
+nav {
+  z-index: 1000;
+}
 .container, .lowerSection {
     height: 100vh;
     left: 0;
@@ -108,8 +110,6 @@ header {
     font-family: 'Arvo', serif;
     font-size: 2vw;
     border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0);
-    border-top: 1px solid rgba(255, 255, 255, 0);
 
     transition: all 300ms ease-in-out;
     
@@ -121,15 +121,47 @@ header {
 #navigationBox > #navBox2 > button:hover {
     scale: 1.1;
     padding: 4px 5px 4px 5px;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-
 }
 
-.container_image > #navigationBox > #navBox2 > button:hover{
-    border-bottom: 1px solid rgb(255, 255, 255);
-    border-top: 1px solid rgb(255, 255, 255);
-}
+#navigationBox > #navBox2 > button {
+	display: inline-block;
+	position: relative;
+  }
+  
+  #navigationBox > #navBox2 > button:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #000000;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+  }
+  
+  #navigationBox > #navBox2 > button:hover:after, 
+  .container_image > #navigationBox > #navBox2 > button:hover:after{
+	
+    transform: scaleX(1);
+	  transform-origin: bottom left;
+  }
+
+  .container_image > #navigationBox > #navBox2 > button:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    }
+
+
 
 
 
@@ -193,7 +225,7 @@ section p {
 //////////////////////////////////////////////////////////////////// */
 
 section {
-  min-height: 150vh;
+  max-height: 100vh;
   max-width: 100vw;
 
   top: 200vh;
@@ -202,12 +234,14 @@ section {
 
 
 #cardsBox1 {
-	width: 70vw;
+	width: 80vw;
 	height: 25vh;
 	
 	box-sizing: border-box;
-  margin: 100px 0px 0px 0px;
+  margin: 20vw 0px 0px 0px;
   padding: 0px;
+
+  display: flex;
 
 position: absolute;
 top: 1%;
@@ -216,18 +250,28 @@ transform: translate(-50%);
 	
 	
 }  
-#upperBox {
-	width: 60vw;
+#textBox {
+  width: 40vw;
+  height: 25vh;
+  
+  position: relative;
+  opacity: 0;
+  transform: translate(100%, -10%);
+  transition: all 1s ease-in-out;
+  
+}
+#picsBox {
+	width: 40vw;
 	height: 25vh;
-
+ 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
-  position: absolute;
-top: 1%;
-left: 50%;
-transform: translate(-50%, 50%);
+ 
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 
@@ -237,8 +281,7 @@ transform: translate(-50%, 50%);
   background-size: cover;
   background-position: center;
 
-  transform: rotate(-1deg);
-	
+  
 }
 #card2 {
   background-image: url('https://plus.unsplash.com/premium_photo-1664368832311-7fe635e32c7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx3aGl0ZXw%3D&auto=format&fit=crop&w=500&q=60');
@@ -246,7 +289,6 @@ transform: translate(-50%, 50%);
   background-size: cover;
   background-position: center;
 
-	transform: rotate(-2deg);
 	
 
 }
@@ -256,7 +298,6 @@ transform: translate(-50%, 50%);
   background-size: cover;
   background-position: center;
 
-	transform: rotate(5deg);
 }
 #card4 {
 	background-image: url('https://images.unsplash.com/photo-1549201440-34391ce5ffd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60');
@@ -264,7 +305,6 @@ transform: translate(-50%, 50%);
   background-size: cover;
   background-position: center;
 
-	transform: rotate(-6deg);
 }
 
 #card1, #card2, #card3, #card4 {
@@ -280,6 +320,8 @@ transform: translate(-50%, 50%);
 
 	box-shadow: 0px 0px 10pxrgb(255, 255, 255);
 }
+
+
 
 
 
