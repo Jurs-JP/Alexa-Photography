@@ -313,8 +313,8 @@ transform: translate(-50%);
 	border-radius: 10px;
 	cursor: pointer;
 	position: absolute;
- 
-	transition: all 1s ease-in-out;
+  
+	transition: all 0.5s ;
 
 	border: 1px solid initial;
 
@@ -322,8 +322,22 @@ transform: translate(-50%);
 }
 
 
+#footerBox {
+  width: 100vw;
+  height: 30vh;
 
+  top: 370vh;
+  background-color: #4b4b4b;
+}
 
+/* 
 
+put the cards inside thetext box 
+ when hovered on it separates into 
+text and photos
 
+ */
 
+@keyframes changePic {
+  0% {background-image: url();}
+}

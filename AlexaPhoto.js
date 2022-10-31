@@ -13,22 +13,27 @@ var zIn = 12;
 		
 		card.addEventListener("click", ()=> {
 
-	if(window.innerWidth > 1200){
+		cd1.style.transition = "transform 0.8s ease-in-out"
+		cd2.style.transition = "transform 0.4s ease-in-out"
+		cd3.style.transition = "transform 1s ease-in-out"
+		cd4.style.transition = "transform 0.6s ease-in-out"
 
-	cd1.style.transform = "translate(80%, 60%) rotate(4deg)";
-	cd2.style.transform = "translate(200%, 60%) rotate(-1deg)";
+		if(window.innerWidth > 1200){
+		
+		cd1.style.transform = "translate(80%, 60%) rotate(4deg)";
+		cd2.style.transform = "translate(200%, 60%) rotate(-1deg)";
+		
+		cd3.style.transform = "translate(80%, -60%) rotate(-2deg)";
+		cd4.style.transform = "translate(200%, -60%) rotate(6deg)";	
 
-	cd3.style.transform = "translate(80%, -60%) rotate(-2deg)";
-	cd4.style.transform = "translate(200%, -60%) rotate(6deg)";	
+		} else {		
+	
+		cd1.style.transform = "translate(10%, 60%) rotate(4deg)";
+		cd2.style.transform = "translate(130%, 60%) rotate(-1deg)";
 
-	} else {		
-
-	cd1.style.transform = "translate(10%, 60%) rotate(4deg)";
-	cd2.style.transform = "translate(130%, 60%) rotate(-1deg)";
-
-	cd3.style.transform = "translate(10%, -60%) rotate(-2deg)";
-	cd4.style.transform = "translate(130%, -60%) rotate(6deg)";	
-	}
+		cd3.style.transform = "translate(10%, -60%) rotate(-2deg)";
+		cd4.style.transform = "translate(130%, -60%) rotate(6deg)";	
+		}
 
 	
 
@@ -48,11 +53,40 @@ var zIn = 12;
 		textBox.style.backgroundColor = "rgb(245,245,245)"
 		console.log(`Width: ${window.innerWidth}`)
 		console.log(`Height: ${window.innerHeight}`)
+
+			
+
+
+		cd1.addEventListener("mouseover", () =>{
+			cd1.style.transform = "translate(80%, 60%) scale(1.4) rotate(0deg)";
+		})
+		cd2.addEventListener("mouseover", () =>{
+			cd2.style.transform = "translate(200%, 60%) scale(1.4) rotate(0deg)";
+		})
+		cd3.addEventListener("mouseover", () =>{
+			cd3.style.transform = "translate(80%, -60%) scale(1.4) rotate(0deg)";
+		})
+		cd4.addEventListener("mouseover", () =>{
+			cd4.style.transform = "translate(200%, -60%) scale(1.4) rotate(0deg)";
+		})
+		cd1.addEventListener("mouseout", () =>{ 
+			cd1.style.transform = "translate(80%, 60%) rotate(4deg)";
+		})
+		cd2.addEventListener("mouseout", () =>{ 
+			cd2.style.transform = "translate(200%, 60%) rotate(-1deg)";
+		})
+		cd3.addEventListener("mouseout", () =>{ 
+			cd3.style.transform = "translate(80%, -60%) rotate(-3deg)";
+		})
+		cd4.addEventListener("mouseout", () =>{ 
+			cd4.style.transform = "translate(200%, -60%) rotate(6deg)";
+		})
+
+		
 	})
 
 		
-		
-	}
+}
 	
 
 
