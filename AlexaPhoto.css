@@ -88,6 +88,7 @@ nav {
   text-align: center;
   font-size: 12vw;
 
+  
   text-align: center;
   font-family: 'Dancing Script', cursive;
   font-weight: 900;
@@ -110,6 +111,7 @@ nav {
     font-family: 'Arvo', serif;
     font-size: 2vw;
     border: none;
+    cursor: pointer;
 
     transition: all 300ms ease-in-out;
     
@@ -255,11 +257,15 @@ transform: translate(-50%);
   height: 25vh;
   
   position: relative;
-  opacity: 0;
-  transform: translate(100%, -10%);
+  transform: translate(50%, -30%);
   transition: all 1s ease-in-out;
   
 }
+#texts {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
 #picsBox {
 	width: 40vw;
 	height: 25vh;
@@ -313,12 +319,7 @@ transform: translate(-50%);
 	border-radius: 10px;
 	cursor: pointer;
 	position: absolute;
-  
-	transition: all 0.5s ;
 
-	border: 1px solid initial;
-
-	box-shadow: 0px 0px 10pxrgb(255, 255, 255);
 }
 
 
@@ -338,6 +339,5 @@ text and photos
 
  */
 
-@keyframes changePic {
-  0% {background-image: url();}
-}
+
+
