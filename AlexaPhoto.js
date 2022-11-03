@@ -185,7 +185,7 @@ const numberContainer = document.querySelector('#picsBox');
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
   
-    if((scrolled >= 1200) || (scrolled <= 1400)){
+    if(scrolled >= 1200){
         
 
 
@@ -254,7 +254,7 @@ window.addEventListener('scroll', () => {
 		"('https://plus.unsplash.com/premium_photo-1664361480215-0614092ca185?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60')", 
 		"('https://images.unsplash.com/photo-1549201440-34391ce5ffd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60')"];
 
-var zip = 1;
+
 setInterval(() => {
 cd1.style.transition = "all 1s ease-in-out";
 cd1.style.opacity= "0";
@@ -268,38 +268,33 @@ cd3.style.opacity= "0";
 cd4.style.transition = "all 1s ease-in-out";
 cd4.style.opacity= "0";
 
-	let numPic1 = Math.floor(Math.random() * 4);
-	let numPic2 = Math.floor(Math.random() * 4);
-	let numPic3 = Math.floor(Math.random() * 4);
-	let numPic4 = Math.floor(Math.random() * 4);
+	
+	
 
 	setTimeout(()=>{
-		
 
-	
-	console.log(`1: ${numPic1}`)
-	console.log(`2: ${numPic2}`)
-	console.log(`3: ${numPic3}`)
-	console.log(`4: ${numPic4}`)
+	const randomNum = () => {
+		return Math.floor(Math.random() * 4);
+	};
 
-	console.log(`no === ${zip}`)
-	zip++
+	console.log(randomNum())
 
-	cd1.style.backgroundImage = `url${picsUrlArr1[numPic1]}`;
+	cd1.style.backgroundImage = `url${picsUrlArr1[randomNum()]}`;
 
-	cd2.style.backgroundImage = `url${picsUrlArr1[numPic2]}`;
+	cd2.style.backgroundImage = `url${picsUrlArr1[randomNum()]}`;
 
-	cd3.style.backgroundImage = `url${picsUrlArr1[numPic3]}`;
+	cd3.style.backgroundImage = `url${picsUrlArr1[randomNum()]}`;
 
-	cd4.style.backgroundImage = `url${picsUrlArr1[numPic4]}`;
+	cd4.style.backgroundImage = `url${picsUrlArr1[randomNum()]}`;
 
 
-
-	cd1.style.opacity= "1";
-	cd2.style.opacity= "1";
-	cd3.style.opacity= "1";
-	cd4.style.opacity= "1";
-	},1000)
+		setTimeout(()=>{ 
+			cd1.style.opacity= "1";
+			cd2.style.opacity= "1";
+			cd3.style.opacity= "1";
+			cd4.style.opacity= "1";
+		},500);
+	},500)
 },5000)
 
 
@@ -313,7 +308,9 @@ cd4.style.opacity= "0";
 
 
     } 
-});
+}
+
+);
 
 // var picsUrlArr1 = ["('https://images.unsplash.com/photo-1612061279301-c1bd3a484fcf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60')",
 // "('https://plus.unsplash.com/premium_photo-1664368832311-7fe635e32c7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx3aGl0ZXw%3D&auto=format&fit=crop&w=500&q=60')",
