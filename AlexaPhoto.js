@@ -1,4 +1,3 @@
-const spread = document.getElementById('spreadCards');
 const cd1 = document.getElementById("card1");
 const cd2 = document.getElementById("card2");
 const cd3 = document.getElementById("card3");
@@ -130,10 +129,6 @@ var zIn = 12;
 		
 // }
 	
-		textBox.style.border = "2px solid rgb(210,210,210)";
-		textBox.style.borderRadius = "10px 0px 0px 10px"
-		textBox.style.backgroundColor = "rgb(245,245,245)"
-
 var card= {
 	card1: "photo1",
 	card2: ""
@@ -185,14 +180,17 @@ const numberContainer = document.querySelector('#picsBox');
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
   
-    if(scrolled >= 1200){
+    if(scrolled >= 1100){
         
+		cd1.style.transition = "all 1.2s ease-in-out"
+		cd2.style.transition = "all .8s ease-in-out"
+		cd3.style.transition = "all 1.5s ease-in-out"
+		cd4.style.transition = "all 1s ease-in-out"
 
-
-		cd1.style.transition = "transform 0.8s ease-in-out"
-		cd2.style.transition = "transform 0.4s ease-in-out"
-		cd3.style.transition = "transform 1s ease-in-out"
-		cd4.style.transition = "transform 0.6s ease-in-out"
+		cd1.style.opacity = "1";
+		cd2.style.opacity = "1";
+		cd3.style.opacity = "1"; 
+		cd4.style.opacity = "1";
 
 		if(window.innerWidth > 1200){
 		
@@ -211,13 +209,7 @@ window.addEventListener('scroll', () => {
 		cd4.style.transform = "translate(130%, -60%) rotate(6deg)";	
 		}
 
-		texts.style.opacity = "1";
-
-		if(window.innerWidth > 1200){
-			textBox.style.transform = " translate(0%, -30%)"
-		} else{
-			textBox.style.transform = " translate(0%, -0%)"
-		}
+		
 		
 		
 	
@@ -248,119 +240,97 @@ window.addEventListener('scroll', () => {
 		})
 
 
+setTimeout(()=> {
+	texts.style.opacity = "1";
 
-		var picsUrlArr1 = ["('https://images.unsplash.com/photo-1612061279301-c1bd3a484fcf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60')",
-		"('https://plus.unsplash.com/premium_photo-1664368832311-7fe635e32c7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx3aGl0ZXw%3D&auto=format&fit=crop&w=500&q=60')",
-		"('https://plus.unsplash.com/premium_photo-1664361480215-0614092ca185?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60')", 
-		"('https://images.unsplash.com/photo-1549201440-34391ce5ffd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60')"];
-
-
-setInterval(() => {
-cd1.style.transition = "all 1s ease-in-out";
-cd1.style.opacity= "0";
-
-cd2.style.transition = "all 1s ease-in-out";
-cd2.style.opacity= "0";
-
-cd3.style.transition = "all 1s ease-in-out";
-cd3.style.opacity= "0";
-
-cd4.style.transition = "all 1s ease-in-out";
-cd4.style.opacity= "0";
-
-	
-	
-
-	setTimeout(()=>{
-
-	const randomNum = () => {
-		return Math.floor(Math.random() * 4);
-	};
-
-	console.log(randomNum())
-
-	cd1.style.backgroundImage = `url${picsUrlArr1[randomNum()]}`;
-
-	cd2.style.backgroundImage = `url${picsUrlArr1[randomNum()]}`;
-
-	cd3.style.backgroundImage = `url${picsUrlArr1[randomNum()]}`;
-
-	cd4.style.backgroundImage = `url${picsUrlArr1[randomNum()]}`;
+	if(window.innerWidth > 1200){
+		textBox.style.transform = " translate(0%, -30%)"
+	} else{
+		textBox.style.transform = " translate(0%, -0%)"
+	}
 
 
-		setTimeout(()=>{ 
-			cd1.style.opacity= "1";
-			cd2.style.opacity= "1";
-			cd3.style.opacity= "1";
-			cd4.style.opacity= "1";
-		},500);
-	},500)
-},5000)
-
-
-	
-
+	textBox.style.backgroundColor = "rgb(245,245,245)"
+	textBox.style.transition = "all 1s ease-in-out"
+	textBox.style.opacity = "1";
 	textBox.style.border= "none";
-	textBox.style.borderTop = "1px solid rgb(210,210,210)"
-	textBox.style.borderLeft = "1px solid rgb(210,210,210)"
-	textBox.style.borderBottom = "1px solid rgb(210,210,210)"
-
-
-
+	
+},300)	
+	
     } 
 }
 
 );
 
-// var picsUrlArr1 = ["('https://images.unsplash.com/photo-1612061279301-c1bd3a484fcf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60')",
-// "('https://plus.unsplash.com/premium_photo-1664368832311-7fe635e32c7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx3aGl0ZXw%3D&auto=format&fit=crop&w=500&q=60')",
-// "('https://plus.unsplash.com/premium_photo-1664361480215-0614092ca185?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60')", 
-// "('https://images.unsplash.com/photo-1549201440-34391ce5ffd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60')"];
-
-// var zip = 1;
-// setInterval(() => {
-// cd1.style.transition = "all 1s ease-in-out";
-// cd1.style.opacity= "0";
-
-// cd2.style.transition = "all 1s ease-in-out";
-// cd2.style.opacity= "0";
-
-// cd3.style.transition = "all 1s ease-in-out";
-// cd3.style.opacity= "0";
-
-// cd4.style.transition = "all 1s ease-in-out";
-// cd4.style.opacity= "0";
 
 
 
-// setTimeout(()=>{
+var picsUrlArr1 = ["('https://images.unsplash.com/photo-1612061279301-c1bd3a484fcf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60')",
+		"('https://plus.unsplash.com/premium_photo-1664368832311-7fe635e32c7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx3aGl0ZXw%3D&auto=format&fit=crop&w=500&q=60')",
+		"('https://images.unsplash.com/photo-1659598086265-4728c6fbce19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMxfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60')", 
+		"('https://images.unsplash.com/photo-1549201440-34391ce5ffd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60')",
+	"('https://images.unsplash.com/photo-1667631798116-a7805e36fee1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfHhIeFlUTUhMZ09jfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60')"];
+		
+var numArr1 = [3,4,0,1,2];
+
+var randomNum = () => {
+	return Math.floor(Math.random() * 4);
+};
+setInterval(() => {
+
+	setTimeout(() => {
+			//pic 1 initial transition
+			cd1.style.transition = "all 0.5s ease-in-out";
+			
+			setTimeout(() => {
+				//pic 1 second transition
+				cd1.style.backgroundImage = `url${picsUrlArr1[numArr1[0]]}`;
+				numArr1.push(numArr1[0])
+				numArr1.shift()
+					setTimeout(()=> {
+						//pic 2 initial transition
+						cd2.style.transition = "all 0.5s ease-in-out";
+						
+							setTimeout(()=> {
+								//pic 2 second transition
+								cd2.style.backgroundImage = `url${picsUrlArr1[numArr1[0]]}`;
+								numArr1.push(numArr1[0])
+								numArr1.shift()
+									setTimeout(()=> {
+										//pic 3 initial transition
+										cd3.style.transition = "all 0.5s ease-in-out";
+										
+											setTimeout(()=> {
+												//pic 3 second transition
+												cd3.style.backgroundImage = `url${picsUrlArr1[numArr1[0]]}`;
+												numArr1.push(numArr1[0])
+												numArr1.shift()
+													setTimeout(()=> {
+														//pic 4 initial transition
+														cd4.style.transition = "all 0.5s ease-in-out";
+														
+															setTimeout(()=> {
+																//pic 4 second transition
+																cd4.style.backgroundImage = `url${picsUrlArr1[numArr1[0]]}`;
+																numArr1.push(numArr1[0])
+																numArr1.shift()
+															},500)
+													},500)
+											},500)
+									},500)
+							},500)
+					},500)
+			},500)
+	},1000)
+
+},4000)
 
 
-// var numPic1 = Math.floor(Math.random() * 4);
-// var numPic2 = Math.floor(Math.random() * 4);
-// var numPic3 = Math.floor(Math.random() * 4);
-// var numPic4 = Math.floor(Math.random() * 4);
-// console.log(`1: ${numPic1}`)
-// console.log(`2: ${numPic2}`)
-// console.log(`3: ${numPic3}`)
-// console.log(`4: ${numPic4}`)
 
-// console.log(`no === ${zip}`)
-// zip++
+const getStart = document.querySelector("#getStarted")
+const lowerSec = document.querySelector(".lowerSection");
 
-// cd1.style.backgroundImage = `url${picsUrlArr1[numPic1]}`;
+getStart.addEventListener("click", ()=> {
+	lowerSec.scrollIntoView();
+})
 
-// cd2.style.backgroundImage = `url${picsUrlArr1[numPic2]}`;
-
-// cd3.style.backgroundImage = `url${picsUrlArr1[numPic3]}`;
-
-// cd4.style.backgroundImage = `url${picsUrlArr1[numPic4]}`;
-
-
-
-// cd1.style.opacity= "1";
-// cd2.style.opacity= "1";
-// cd3.style.opacity= "1";
-// cd4.style.opacity= "1";
-// },1000)
-// },5000)
