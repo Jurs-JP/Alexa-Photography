@@ -79,21 +79,21 @@ nav {
 }
 
 #getStarted, #getStarted2 {
-  max-width: 30vw;
+
+  max-width: 37vw;
   max-height: 12vh;
   
   font-size: 5vw;
-  padding: 0px 10px;
+  padding: 0px 15px;
   color: rgb(0, 0, 0);
-  filter: drop-shadow(0px 0px 1px black);
-  border-radius: 5px;
+  border-radius: 50px;
 
   background-color: inherit;
   border: solid rgb(0, 0, 0) 1px;
 
   margin: 0px;
   transition: all 0.4s ease-in-out;
-
+  
   cursor: pointer;
 
   font-family: 'Arvo', serif;
@@ -106,7 +106,7 @@ nav {
   color: rgb(255, 255, 255);
   border: solid rgb(255, 255, 255) 1px;
   opacity: 0.8;
-  
+
 }
 
 #getStarted2 {
@@ -271,7 +271,7 @@ section p {
 //////////////////////////////////////////////////////////////////// */
 
 section > .lowerSection{
-  max-height: 100vh;
+  height: 100vh;
   max-width: 100vw;
 
   top: 200vh;
@@ -279,8 +279,8 @@ section > .lowerSection{
 }
 
 .footerSection {
-  max-height: 100vh;
-  max-width: 100vw;
+  height: 100vh;
+  width: 100vw;
 
   top: 100vh;
   position: relative;
@@ -292,7 +292,7 @@ section > .lowerSection{
 	height: 25vh;
 	
 	box-sizing: border-box;
-  margin: 20vw 0px 0px 0px;
+  margin: 20vw 0px 20vw 0px;
   padding: 0px;
 
   display: flex;
@@ -371,13 +371,7 @@ transform: translate(-50%);
 }
 
 
-#footerBox {
-  width: 100vw;
-  height: 30vh;
 
-  top: 300vh;
-  background-color: #4b4b4b;
-}
 
 /* 
 
@@ -387,19 +381,13 @@ text and photos
 
  */
 
-
-#promotionBox {
+.promotionBox {
   width: 80vw;
-  height: 60vh;
-
-  border: solid green 2px;
-
-  box-sizing: border-box;
-  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2VkZGluZyUyMGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 30vh;
 
   margin: 0px auto;
-
+  border: solid 1px green;
+  box-sizing: border-box;
 }
+
+

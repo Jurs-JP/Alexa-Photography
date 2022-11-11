@@ -15,13 +15,6 @@ var zIn = 12;
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 				// Section Optimizations //
-const footerSec = document.querySelector(".footerSection");
-if(window.innerWidth > 1200) {
-
-	footerSec.style.top = "100vh";
-} else {
-	footerSec.style.top = "50vh";
-}
 
 
 
@@ -80,7 +73,7 @@ if(window.innerWidth > 1200){
 	textBox.style.height= "25vh"
 	textBox.style.transform = "translate(100%, 20%)";
 
-	document.querySelector('section').style.maxHeight = "50vh";
+
 	document.querySelector('#cardsBox1').style.height = '40vw';
 
 	cd1.style.width = "21vw";
@@ -107,7 +100,7 @@ const numberContainer = document.querySelector('#picsBox');
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
   
-    if(scrolled >= 1100){
+    if(scrolled >= 1200){
         
 		cd1.style.transition = "all 1.2s ease-in-out"
 		cd2.style.transition = "all .8s ease-in-out"
@@ -256,9 +249,20 @@ setInterval(() => {
 
 const getStart = document.querySelector("#getStarted")
 const lowerSec = document.querySelector(".lowerSection");
+const promBox = document.querySelector(".promotionBox");
 
 getStart.addEventListener("click", ()=> {
 	lowerSec.scrollIntoView();
 })
+
+if(window.innerWidth > 1200) {
+	lowerSec.style.height = "200vh";
+} else {
+	lowerSec.style.height = "100vh";
+	promBox.style.margin = "20vh auto 0px auto";
+	promBox.style.height = "15vh";
+}
+
+
 
 
