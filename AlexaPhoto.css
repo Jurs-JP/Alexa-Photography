@@ -6,7 +6,7 @@ body {
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 
   }
 
@@ -16,6 +16,7 @@ header {
 nav {
   z-index: 1000;
 }
+
 .container, .lowerSection {
     height: 100vh;
     left: 0;
@@ -74,8 +75,11 @@ nav {
     scale: 1.2;
 }
 #navigationBox > #navBox1 > a:hover {
-  transform: translateX(0.6vw);
+  transform: translateX(0.8vw);
   scale: 1.5;
+}
+.navigationBox> #navBox2 > button {
+  opacity: 0;
 }
 
 #getStarted, #getStarted2 {
@@ -165,7 +169,7 @@ nav {
 }
 
 #navigationBox > #navBox2 > button:hover {
-    scale: 1.1;
+
     padding: 4px 5px 4px 5px;
 }
 
@@ -271,14 +275,14 @@ section p {
 //////////////////////////////////////////////////////////////////// */
 
 section > .lowerSection{
-  height: 100vh;
+  height: 200vh;
   max-width: 100vw;
 
   top: 200vh;
   position: relative;
 }
 
-.footerSection {
+/* .footerSection {
   height: 100vh;
   width: 100vw;
 
@@ -370,17 +374,6 @@ transform: translate(-50%);
 
 }
 
-
-
-
-/* 
-
-put the cards inside thetext box 
- when hovered on it separates into 
-text and photos
-
- */
-
 .promotionBox {
   width: 80vw;
   height: 30vh;
@@ -390,4 +383,150 @@ text and photos
   box-sizing: border-box;
 }
 
+ */
 
+.contentBox {
+  width: 80vw;
+  height: 80vh;
+
+  padding: 0px;
+
+ 
+  margin: 70px auto 0px auto;
+
+  display: flex;
+}
+.contentBox > .textBox{
+ width: 50%;
+ height: 100%;
+
+ box-sizing: border-box;
+ padding: 20px;
+}
+
+.contentBox > .picBox {
+  width: 50%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns:50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "card1 card2"
+    "card3 card4";
+ justify-content: center;
+ align-items: center;
+
+}
+
+.card {
+  width: 75%;
+  height: 85%;
+
+  margin: auto;
+}
+#card1 {
+  background-image: url('https://images.unsplash.com/photo-1612061279301-c1bd3a484fcf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60');
+
+  grid-area: card1;
+}
+#card2 {
+  background-image: url('https://plus.unsplash.com/premium_photo-1664368832311-7fe635e32c7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx3aGl0ZXw%3D&auto=format&fit=crop&w=500&q=60');
+
+  grid-area: card2;
+}
+#card3 {
+  background-image: url('https://images.unsplash.com/photo-1659598086265-4728c6fbce19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMxfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+
+  grid-area: card3;
+}
+#card4 {
+  background-image: url('https://images.unsplash.com/photo-1549201440-34391ce5ffd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGh1bWFufGVufDB8fDB8d2hpdGV8&auto=format&fit=crop&w=500&q=60');
+  
+  grid-area: card4;
+}
+
+#card1, #card2, #card3, #card4 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+#card1:hover {
+  
+}
+
+
+.texts {
+  height: 90%;
+  width: 100%;
+
+  margin: auto;
+  overflow: auto;
+  direction: rtl;
+}
+p, h1 {
+  margin-left: 10px;
+  direction: ltr;
+}
+.hr1 {
+  width: 90%;
+  opacity: 0;
+  margin: 50px auto 80px auto;
+  transition: all 2s ease-in-out;
+
+}
+
+.visitBox1, .visitBox2, .visitBox3 {
+  width: 84vw;
+  height: 60vh;
+  margin: 20px auto;
+  display: flex;
+}
+
+.text1, .text2, .text3 {
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 20px;
+  text-align: center;
+  margin: 0px;
+}
+.text3 {
+  color: white;
+  letter-spacing: 5px;
+  padding: 18px 70px 18px 70px;
+  background-color: #000000;
+}
+.text3:hover {
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.7;
+}
+.visitBox1 > .picBox {
+  width: 55%;
+  height: 100%;
+
+  background-image: url("https://images.unsplash.com/photo-1561912774-79769a0a0a7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 0;
+
+  transition: all 1s ease-in-out;
+  transform: translate(20%, 0%);
+}
+
+.visitBox1 > .textBox {
+  width: 45%;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+
+  transition: all 1s ease-in-out;
+  transform: translate(20%, 0%);
+}

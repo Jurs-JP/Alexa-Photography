@@ -10,6 +10,9 @@
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     </head>
 <link >
 <body>
@@ -29,8 +32,8 @@
             </nav>
             <nav id="navBox2"> 
                 <button> <a href="#">HOME</a>  </button>
-                <button> BLOG </button>
-                <button> GALLERY </button>
+                <button> <a href="blog_HTML.html">BLOG </a></button>
+                <button> <a href="gallery_HTML.html">GALLERY</a></button>
                 <button> <a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"> CONTACT ME</a> </button>
             </nav>
         </nav>
@@ -51,8 +54,8 @@
             </nav>
             <nav id="navBox2"> 
                 <button> <a href="#">HOME</a>  </button>
-                <button> BLOG </button>
-                <button> GALLERY </button>
+                <button> <a href="blog_HTML.html">BLOG </a></button> </button>
+                <button> <a href="gallery_HTML.html">GALLERY</a></button>
                 <button> <a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"> CONTACT ME </a> </button>
             </nav>
         </nav>
@@ -67,21 +70,21 @@
   
   <section class="lowerSection">
 
-    <nav id="navigationBox">
+    <nav id="navigationBox" class="navigationBox">
         <nav id="navBox1">
             <div id="spacing"> </div>
             <a href=""https://www.facebook.com/profile.php?id=100083079197863" target="_blank"></a>
         </nav>
         <nav id="navBox2" class="navBox2"> 
             <button> <a href="#">HOME</a>  </button>
-            <button> BLOG </button>
-            <button> GALLERY </button>
+            <button> <a href="blog_HTML.html">BLOG </a></button> </button>
+            <button> <a href="gallery_HTML.html">GALLERY</a></button>
             <button> <a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"> CONTACT ME </a> </button>
         </nav>
     </nav>
     
 
-      <div id="cardsBox1"> 
+      <!-- <div id="cardsBox1"> 
         <div id="textBox">
             <div id="texts">
                 <h2>Title here</h2>
@@ -108,43 +111,47 @@
 
       <div class="promotionBox">
 
+      </div> -->
+      <div class="contentBox">
+            <div class="textBox">
+                    <div class="texts">
+                        <h1>Hello</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quidem dolor dicta assumenda illum? Cum quas aut maiores culpa atque omnis voluptas reiciendis dolorem temporibus deserunt, sed eos excepturi quos.
+                        Voluptas quasi error, corrupti quas magni veritatis, quod, libero quia consectetur nobis eos necessitatibus quidem rem? Non unde, ipsa esse reprehenderit perferendis aliquam natus mollitia illo aliquid qui, modi voluptates.
+                        Sed, illum omnis veniam voluptates aliquid iure eum modi! Ea aut porro tempore doloribus dolorem, sint vel. Nisi repudiandae, blanditiis voluptate dicta necessitatibus, reiciendis aliquid facere dolorum neque est unde?
+                        Rerum provident reiciendis dolore nihil odit facilis at aspernatur omnis, nobis, fugiat debitis? Earum eaque aut provident eos corporis consequatur rerum corrupti cum nobis explicabo? Alias laudantium libero distinctio adipisci.
+                  </div>
+            </div>
+            <div class="picBox">
+                <div id="card1" class="card"> </div>
+                <div id="card2" class="card"> </div>
+                <div id="card3" class="card"> </div>
+                <div id="card4" class="card"> </div>
+            </div>
       </div>
+      <hr class="hr1">
+      <div class="visitBox1" id="visitBox">
+            <div class="picBox"></div>
+            <div class="textBox">
+                <h1 class="text1">OUR WORK</h1>
+                <h3 class="text2">Some of our more recent work is featured in our gallery.</h3>
+                <h3 class="text3"> <a href="gallery_HTML.html">VISIT GALLERY</a> </h3>
+            </div>
+            
+
+      </div>
+      <div class="visitBox2" id="visitBox">
 
 
- 
+    </div>
+    <div class="visitBox3" id="visitBox">
 
-  </section>
-                                 <!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
 
-    <!-- Your Chat Plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
     </div>
 
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "116709544361102");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
+   
 
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v15.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-     </div>
+  </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="AlexaPhoto.js"></script>
 </body>
