@@ -33,21 +33,6 @@ const cd4 = document.getElementById("card4");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	
 // var card= {
 // 	card1: "photo1",
