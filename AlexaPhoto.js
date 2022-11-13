@@ -319,7 +319,7 @@ texts.style.transition = "all 1.5s ease-in-out"
 window.addEventListener('scroll', () => {
 	 const scrolled = window.scrollY;
 	
-	if(scrolled >= 1200){
+	if(scrolled >= 1100){
 		hr1.style.opacity = "1";
 		texts.style.opacity = "1";
 		texts.style.transform = "translate(0%, 0%)";
