@@ -278,6 +278,8 @@ const visitBox = document.querySelectorAll("#visitBox")
 const picBox = document.querySelector(".visitBox1 > .picBox")
 const textBox = document.querySelector(".visitBox1 > .textBox")
 const text3 = document.querySelector(".text3");
+const getStart = document.querySelector("#getStarted")
+
 
 if(window.innerWidth > 1200){
 lowerSection.style.height = "500vh";
@@ -432,3 +434,6 @@ setInterval(() => {
 
 },4000)
 
+getStart.addEventListener("click", ()=> {
+	lowerSection.scrollIntoView();
+})
