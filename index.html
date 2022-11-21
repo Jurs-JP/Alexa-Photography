@@ -13,39 +13,11 @@
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    </head>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        </head>
 <link >
 <body>
-    <!-- Messenger Chat Plugin Code -->
-<div id="fb-root"></div>
-
-<!-- Your Chat Plugin code -->
-<div id="fb-customer-chat" class="fb-customerchat">
-</div>
-
-<script>
-  var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "116709544361102");
-  chatbox.setAttribute("attribution", "biz_inbox");
-</script>
-
-<!-- Your SDK code -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v15.0'
-    });
-  };
-
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
     
 <header>
 
@@ -64,14 +36,14 @@
                 <button> <a href="#">HOME</a>  </button>
                 <button> <a href="blog_HTML.html">BLOG </a></button>
                 <button> <a href="gallery_HTML.html">GALLERY</a></button>
-                <button> <a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"> CONTACT ME</a> </button>
+                <button> <a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"> CONTACT US</a> </button>
             </nav>
         </nav>
       <div class="title_wrapper">
         
         
         <h1><a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"> Alexa Photography </a></h1>
-        <button id="getStarted"> Explore Now </button>
+        <!-- <button id="getStarted"> Explore Now </button> -->
     </div>
     </div>
   
@@ -80,19 +52,19 @@
         <nav id="navigationBox">
             <nav id="navBox1">
                 <div id="spacing"> </div>
-                <a href=""https://www.facebook.com/profile.php?id=100083079197863" target="_blank"></a>
+                <a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"></a>
             </nav>
             <nav id="navBox2"> 
                 <button> <a href="#">HOME</a>  </button>
                 <button> <a href="blog_HTML.html">BLOG </a></button> </button>
                 <button> <a href="gallery_HTML.html">GALLERY</a></button>
-                <button> <a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"> CONTACT ME </a> </button>
+                <button> <a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"> CONTACT US </a> </button>
             </nav>
         </nav>
         <div class="title_wrapper">
        
         <h1><a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"> Alexa Photography </a></h1>
-        <button id="getStarted2"> Get Started </button>
+        <!-- <button id="getStarted2"> Get Started </button> -->
     </div>
     </div>
   
@@ -103,13 +75,13 @@
     <nav id="navigationBox" class="navigationBox">
         <nav id="navBox1">
             <div id="spacing"> </div>
-            <a href=""https://www.facebook.com/profile.php?id=100083079197863" target="_blank"></a>
+            <a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"></a>
         </nav>
         <nav id="navBox2" class="navBox2"> 
             <button> <a href="#">HOME</a>  </button>
             <button> <a href="blog_HTML.html">BLOG </a></button> </button>
             <button> <a href="gallery_HTML.html">GALLERY</a></button>
-            <button> <a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"> CONTACT ME </a> </button>
+            <button> <a href="https://www.facebook.com/profile.php?id=100083079197863" target="_blank"> CONTACT US </a> </button>
         </nav>
     </nav>
     
@@ -161,26 +133,58 @@
       </div>
       <h1 class="aboutUs">MORE ABOUT US</h1>
       <hr class="hr1">
-      <div class="visitBox1" id="visitBox">
+
+    <div class="visitBox1" id="visitBox">
             <div class="picBox"></div>
             <div class="textBox">
                 <h1 class="text1">OUR WORK</h1>
                 <h3 class="text2">Some of our more recent work is featured in our gallery.</h3>
                 <h3 class="text3"> <a href="gallery_HTML.html">VISIT GALLERY</a> </h3>
-            </div>
-            
+            </div>    
+    </div>
 
-      </div>
-      <div class="visitBox2" id="visitBox">
-        
+    <div class="visitBox2" id="visitBox">
+        <div class="textBox">
+          <h1 class="text1">Visit our <span class="blogText"> <a href="blog_HTML.html">BLOG</a></span></h1>
+        </div>
+        <div class="picBox"> </div>
 
     </div>
+
     <div class="visitBox3" id="visitBox">
-
-
+        <div class="picBox">
+          <h1>Questions about Alexa Photography?</h1>
+          <p>Alexa Photography is here to help you tell your story. Our creative photographers deliver stunning pictures to customers across Iloilo and Guimaras, and we're ready to make sure your memories get captured.</p>
+          <h3 class="contactUs"> <a class="contact" href="">CONTACT US</a>  <span class="material-symbols-outlined">chat</span></h3>
+        </div>
     </div>
+    
+  <footer class="footerBox">
+    <div class="footUp">
+       
+        <div class="footUpBoxes"></div>
+        <span class="alexaText"> Alexa Photography</span>
+        <div class="footUpBoxes"></div>
+    </div>
+    <div class="footDown">
+        <div class="footLeft">
+            <img src="fb.png" alt="Facebook">
+            <img src="insta.png" alt="Instagram">
+            <img src="twitter.png" alt="Twitter">
+        </div>
+        <div class="footRight">
+            <h2>Blog</h2>
+            <h2>Gallery</h2>
+            <h2>Contact Me</h2>
+        </div>
+    </div>
+    <div class="zipCode">
+        <p>5000 Iloilo City, Iloilo</p>
+        <p>Philippines</p>  
+    </div>
+      
+  </footer>
 
-   
 
   </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

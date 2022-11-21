@@ -259,35 +259,67 @@ const lowerSection = document.querySelector(".lowerSection");
 const navBox = document.querySelector("#navigationBox");
 const navButtons = document.querySelectorAll("buttons")
 const hr1 = document.querySelector(".hr1");
-const visitBox = document.querySelectorAll("#visitBox")
-const picBox = document.querySelector(".visitBox1 > .picBox")
-const textBox = document.querySelector(".visitBox1 > .textBox")
 const text3 = document.querySelector(".text3");
 const getStart = document.querySelector("#getStarted")
+const aboutUs = document.querySelector(".aboutUs");
+const footRight = document.querySelectorAll(".footRight > h2")
+const footLeft = document.querySelectorAll(".footLeft > img")
 
+const allVisitBox = document.querySelectorAll("#visitBox")
+const visitBox2 = document.querySelector(".visitBox2");
+const picBox = document.querySelector(".visitBox1 > .picBox")
+const textBox = document.querySelector(".visitBox1 > .textBox")
+const picBox2 = document.querySelector(".visitBox2 > .picBox")
+const textBox2 = document.querySelector(".visitBox2 > .textBox")
+const footer = document.querySelector(".footerBox");
+const contactUs = document.querySelector(".contactUs");
 
 if(window.innerWidth > 1200){
-lowerSection.style.height = "500vh";
+lowerSection.style.height = "450vh";
+footer.style.height = "55vh";
 
 
 } else {
-lowerSection.style.height = "300vh";
+lowerSection.style.height = "320vh";
 contentBox.style.marginTop = "70px";
 contentBox.style.height = "22vh";
 picBox.style.width = "100%";
 picBox.style.height = "50%";
 textBox.style.width = "100%";
 textBox.style.height = "50%";
+picBox2.style.width = "100%";
+picBox2.style.height = "50%";
+textBox2.style.width = "100%";
+textBox2.style.height = "50%";
 
 text3.style.padding = "12px 50px 12px 50px";
+aboutUs.style.fontSize = "1em";
+aboutUs.style.width = "60%";
+aboutUs.style.height = "30px";
+aboutUs.style.letterSpacing = "4px";
+aboutUs.style.padding = "15px 0px 5px 0px"
+aboutUs.style.margin = "50px auto 10px auto";
 
-	visitBox.forEach((visitB) => {
+contactUs.style.fontSize = "0.8em";
+contactUs.style.padding = "10px 20px 20px 20px"; 
+
+
+	allVisitBox.forEach((visitB) => {
 		visitB.style.width = "80vw";
 		visitB.style.height = "60vh";
-		visitB.style.display = "block";
+		visitB.style.display = "flex";
+		visitB.style.flexDirection = "column";
+		visitB.style.margin = "30px auto";
 	});
+	footRight.forEach((footR) => {
+		footR.style.marginTop = "10px";
+	});
+	footLeft.forEach((footL) => {
+		footL.style.marginTop = "0px";
+	});
+hr1.style.margin = "50px auto 50px auto";
+visitBox2.style.flexDirection = "column-reverse";
 }
-
 
 
 
@@ -301,9 +333,17 @@ texts.style.opacity = "0";
 texts.style.transform = "translate(0%, 60%)"
 texts.style.transition = "all 1.5s ease-in-out"
 
+const bgMove = document.querySelector(".container_image");
+
 window.addEventListener('scroll', () => {
 	 const scrolled = window.scrollY;
 	
+	 var counterY = scrolled/20;
+
+	bgMove.style.backgroundPosition = `50% ${50+counterY}%`
+
+
+
 	if(scrolled >= 1100){
 		hr1.style.opacity = "1";
 		texts.style.opacity = "1";
@@ -335,27 +375,37 @@ window.addEventListener('scroll', () => {
 			card.style.transform = "translate(0%,60%)"
 			card.style.opacity = "0";
 			card.style.transition = "all 1.5s ease-in-out"
+			
 		   });
 	}
 
-	if(scrolled > 1700){
+	if(scrolled > 1500){
 
 		textBox.style.transform = "translate(0%, 0%)";
 		textBox.style.opacity = "1";
 		picBox.style.transform = "translate(0%, 0%)";
 		picBox.style.opacity = "1";
-
+		
 	} else {
 
-		textBox.style.transform = "translate(20%, 0%)";
+		textBox.style.transform = "translate(40%, 0%)";
 		textBox.style.opacity = "0";
-		picBox.style.transform = "translate(20%, 0%)";
+		picBox.style.transform = "translate(40%, 0%)";
 		picBox.style.opacity = "0";
-
+		
 	}
 
+	if(scrolled > 1900){
+		visitBox2.style.transform = "translate(0%, 0%)";
+		visitBox2.style.opacity = "1";
+	} else {
+		visitBox2.style.transform = "translate(-40%, 0%)";
+		visitBox2.style.opacity = "0";
+	}
 
 });
+
+	
 
 
 	
@@ -422,3 +472,12 @@ setInterval(() => {
 getStart.addEventListener("click", ()=> {
 	lowerSection.scrollIntoView();
 })
+
+const book = {
+	cover: `binded`,
+	color: `white`
+}
+
+
+
+	
