@@ -379,7 +379,7 @@ window.addEventListener('scroll', () => {
 		   });
 	}
 
-	if(scrolled > 1500){
+	if(scrolled > 1800){
 
 		textBox.style.transform = "translate(0%, 0%)";
 		textBox.style.opacity = "1";
@@ -395,7 +395,7 @@ window.addEventListener('scroll', () => {
 		
 	}
 
-	if(scrolled > 1900){
+	if(scrolled > 2100){
 		visitBox2.style.transform = "translate(0%, 0%)";
 		visitBox2.style.opacity = "1";
 	} else {
